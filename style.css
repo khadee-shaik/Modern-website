@@ -1,0 +1,131 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+body{
+    overflow-x: hidden;
+}
+#background{
+    background-color: black;
+    height: 100%;
+    width: 100%;
+   
+}
+#circle{
+    transform: translate(-50%,-50%);
+    position: absolute;
+    border-radius: 50%;
+    border: 1.5px solid white;
+    width: 60px;
+    height: 60px;
+    z-index: 1;
+    pointer-events: none;
+}
+#background h1{
+    color: #fff;
+    font-size: 390px;
+    font-family: 'futura';
+    font-weight: 900;
+}
+#wrap{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* background-size: contain; */
+    /* text-align: center; */
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-image: url('https://images.unsplash.com/photo-1606857521015-7f9fcf423740?auto=format&fit=crop&q=60&w=500&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTF8fG9mZmljZXxlbnwwfHwwfHx8MA%3D%3D');
+    background-position: 60%;
+}
+#whitestrip{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    transform: translate(0%,-50%);
+    height: 140px;
+    background-color: white;
+    position: absolute;
+    left: 50%;
+    top:50%;
+}
+#blackcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 6px;
+    text-align: center;
+
+    width: 180px;
+    height: 245px;
+    left: 0;
+    top: 51%;
+    background-color: black;
+    position: absolute;
+    transform: translate(-50%,-50%);
+}
+#blackcard p{
+    color: white;
+    font-family: 'poppins';
+    font-size: 16px;
+    padding: 3px;
+    line-height: 23px;
+}
+#lineele{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#lineele .line{
+    width: 200px;
+    height: 2px;
+    margin: 0 30px;
+    background-color: #000;
+}
+
+#lineele{
+    font-family: 'poppins';
+    font-size: 11px;
+}
+#linele i{
+    cursor: pointer;
+    font-size: 15px;
+}
+#background h5{
+    position: absolute;
+    color: white;
+    font-family:'montserrat' ;
+    top: 40%;
+    left: -10%;
+    text-transform: uppercase;
+    font-weight: 200px;
+    letter-spacing: 18px;
+    font-size: 8px;
+    transform: rotate(-90deg);
+}
+svg{
+    /* opacity: 0; */
+    /* background-color: #000; */
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);   
+    z-index: 99999;
+    stroke-dashoffset: 1000px;
+    stroke-dasharray: 1000px; 
+}
+.animate{
+    animation: animation 10s cubic-bezier(0.19, 1, 0.22, 1)   both;
+}
+@keyframes animation {
+    to{
+        stroke-dasharray: 450px;
+    }
+}
